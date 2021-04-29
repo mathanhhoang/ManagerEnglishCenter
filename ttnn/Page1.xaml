@@ -1,0 +1,171 @@
+﻿<Page x:Class="ttnn.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ttnn"
+      mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="Page1" Loaded="pageDK_Load">
+
+    <Grid>
+        <GroupBox Margin="0,10,487,357" Padding="10" Background="White">
+            <GroupBox.Header>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold" Text="Thông tin học viên"/>
+                </StackPanel>
+            </GroupBox.Header>
+            
+            <StackPanel>
+                <TextBox 
+                    x:Name="txtTen"
+                    materialDesign:HintAssist.Hint="Họ tên học viên:"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                    Background="#00000000" />
+                <TextBox 
+                    x:Name="txtNamSinh"
+                    materialDesign:HintAssist.Hint="Năm sinh:"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                    Background="#00000000" />
+                <TextBox 
+                    x:Name="txtQQ"
+                    materialDesign:HintAssist.Hint="Quê quán:"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                    Background="#00000000" />
+                <ComboBox 
+                    x:Name="cboKhoaHoc"
+                    materialDesign:HintAssist.Hint="Khóa học đăng kí"
+                    Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
+                    SelectedItem="khoahoc"/>
+            </StackPanel>
+
+        </GroupBox>
+
+        <GroupBox Margin="808,12,5,56" RenderTransformOrigin="0.5,0.5">
+            <GroupBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.655"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.989"/>
+                </TransformGroup>
+            </GroupBox.RenderTransform>
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontWeight="Bold" Text="Thông tin khóa học"/>
+                </StackPanel>
+            </GroupBox.Header>
+            <materialDesign:Card Background="{DynamicResource MaterialDesignBackground}" Margin="0,0,0,-2" Width="466">
+                <StackPanel>
+                    <Expander
+                        HorizontalAlignment="Stretch"
+                        Header="B1 chuẩn đầu ra">
+                        <StackPanel
+                            Orientation="Vertical"
+                            TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                            Margin="24,8,24,16">
+                            <TextBlock Text="Thông tin Khóa học" />
+                            <TextBlock
+                                Opacity=".68"
+                                Text="Giúp bạn đạt chuẩn đầu ra tốt nghiệp Đại Học với chứng chỉ Tiếng Anh B1. Khóa học được thầy Lộc giảng dạy vào buổi sáng tại trung tâm."
+                                TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Expander>
+                    <Border
+                        Background="{DynamicResource MaterialDesignDivider}"
+                        Height="1"
+                        HorizontalAlignment="Stretch"
+                        SnapsToDevicePixels="True" />
+                    <Expander
+                        HorizontalAlignment="Stretch"
+                        Header="TOEIC xin việc">
+                        <StackPanel
+                            Orientation="Vertical"
+                            TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                            Margin="24,8,24,16">
+                            <TextBlock
+                                Text="Thông tin Khóa học" />
+                            <TextBlock
+                                Opacity=".68"
+                                Text="Giúp bạn có đầy đủ kiến thức nền tảng cho xin việc. Rèn luyện khả năng nghe và giao tiếp cho người cần Tiếng Anh cho môi trường làm việc nước ngoài. Khóa học được giảng dạy bởi cô Cảnh vào mỗi buổi tối tại trung tâm"
+                                TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Expander>
+                    <Border
+                        Background="{DynamicResource MaterialDesignDivider}"
+                        Height="1"
+                        HorizontalAlignment="Stretch"
+                        SnapsToDevicePixels="True" />
+                    <Expander
+                        HorizontalAlignment="Stretch"
+                        Header="IELTS chuẩn Châu Âu">
+                        <StackPanel
+                            Orientation="Vertical"
+                            TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                            Margin="24,8,24,16">
+                            <TextBlock
+                                Text="Thông tin Khóa học" />
+                            <TextBlock
+                                Opacity=".68"
+                                Text="Rèn luyện tiếng Anh đạt chuẩn châu Âu thuận lợi cho việc đi du học nước ngoài. Đào tạo đầy đủ các kĩ năng nghe, nói, đọc, viết như người bản xứ. Khóa học được giảng dạy bởi cô Hoa vào mỗi buổi tối tại trung tâm"
+                                TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </materialDesign:Card>
+        </GroupBox>
+
+        <Button 
+            x:Name="btnDangKi" 
+            Content="Đăng kí" 
+            HorizontalAlignment="Left" 
+            Margin="10,368,0,0" 
+            VerticalAlignment="Top" 
+            Width="94" 
+            Click="btnDangKi_Click"/>
+        <Button 
+            Content="Xóa" 
+            HorizontalAlignment=
+            "Left" Margin="109,368,0,0" 
+            VerticalAlignment="Top" 
+            Width="94" 
+            Click="btnXoa_Click"/>
+        <Button 
+            Content="Tìm" 
+            HorizontalAlignment="Left" 
+            Margin="588,368,0,0" 
+            VerticalAlignment="Top" 
+            Width="94" 
+            Click="btnTim_Click"/>
+        <Button x:Name="btnSua" 
+            Content="Sửa" 
+            HorizontalAlignment="Left" 
+            Margin="687,368,0,0" 
+            VerticalAlignment="Top" 
+            Width="94" 
+            Click="btnSua_Click"/>
+
+
+        <TextBox
+           x:Name="txtTim"
+           materialDesign:HintAssist.Hint="Nhập tên người cần tìm"
+           HorizontalAlignment="Left" Height="32" Margin="208,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375"/>
+        <DataGrid 
+            x:Name="data1" 
+            HorizontalAlignment="Left" 
+            Height="238" 
+            Margin="0,405,0,0" 
+            VerticalAlignment="Top" 
+            Width="793" 
+            SelectionChanged="data1_SelectionChanged"/>
+        <Frame 
+            Name="Nhanvien" 
+            HorizontalAlignment="Left" 
+            Height="32" 
+            Margin="525,10,0,0" 
+            VerticalAlignment="Top" 
+            Width="268"/>
+
+    </Grid>
+</Page>

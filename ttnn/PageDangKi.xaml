@@ -1,0 +1,54 @@
+﻿<Page x:Class="ttnn.PageDangKi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ttnn"
+      mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      d:DesignHeight="380" d:DesignWidth="500"
+      Title="PageDangKi">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock 
+                TextWrapping="Wrap" 
+                Text="Đăng Kí Tài Khoản" 
+                FontSize="30" 
+                TextAlignment="Center" 
+                Foreground="#FFFF0808" 
+                FontWeight="Bold"/>
+            <TextBox
+                x:Name="txtNhapID"
+                materialDesign:HintAssist.Hint="Nhập ID Đăng kí" 
+                Height="30"  />
+            <PasswordBox
+                x:Name="txtNhapPassword"
+                materialDesign:HintAssist.Hint="Nhập mật khẩu" 
+                Height="30" />
+            <TextBox
+                x:Name="txtNhapTen"
+                materialDesign:HintAssist.Hint="Nhập tên người dùng" 
+                Height="30" />
+            <TextBox
+                x:Name="txtNhapNamSinh"
+                materialDesign:HintAssist.Hint="Nhập năm sinh" 
+                Height="30" />
+            <TextBox
+                x:Name="txtNhapQQ"
+                materialDesign:HintAssist.Hint="Nhập quê quán" 
+                Height="30" />
+            <Button 
+                x:Name="btnCreat"
+                Style="{StaticResource MaterialDesignRaisedLightButton}"
+                ToolTip="Resource name: MaterialDesignRaisedLightButton"  
+                Background="#FF072AFB" 
+                BorderBrush="#FF0631FF" 
+                Foreground="#DDFCFBFB" 
+                Height="35" 
+                Click="btnCreat_Click"  
+                RenderTransformOrigin="0.494,-0.006" 
+                Content="Creat"/>
+        </StackPanel>
+    </Grid>
+</Page>

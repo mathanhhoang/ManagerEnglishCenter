@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TTNN" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=TTNN;Integrated Security=True" SettingsObjectName="ttnn.Properties.Settings" SettingsPropertyName="TTNNConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DANGNHAP" Member="DANGNHAPs">
+    <Type Name="DANGNHAP">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NameID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NamSinhID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QQID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TTHV" Member="TTHVs">
+    <Type Name="TTHV">
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NamSinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KhoaHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="KHOAHOC_TTHV" Member="KHOAHOC1" ThisKey="KhoaHoc" OtherKey="KhoaHoc1" Type="KHOAHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHOAHOC" Member="KHOAHOCs">
+    <Type Name="KHOAHOC">
+      <Column Name="KhoaHoc" Member="KhoaHoc1" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKhoaHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GiaoVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ca" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="KHOAHOC_TTHV" Member="TTHVs" ThisKey="KhoaHoc1" OtherKey="KhoaHoc" Type="TTHV" />
+    </Type>
+  </Table>
+</Database>

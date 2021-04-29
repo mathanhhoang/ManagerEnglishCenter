@@ -1,0 +1,46 @@
+﻿<Window x:Name="frmMain" x:Class="ttnn.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ttnn"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Phần mềm trung tâm ngoại ngữ" Height="720" Width="1280">
+    <Grid>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0.333,-0.333">
+            <Button 
+                x:Name="btnDangKiHocVien"
+                VerticalAlignment="Top"
+                Style="{DynamicResource MaterialDesignRaisedButton}"
+                materialDesign:ShadowAssist.ShadowDepth="Depth4" 
+                Width="640" Height="49" 
+                BorderBrush="#FF002CFF" 
+                Click="btnDangKiHocVien_Click" 
+                Grid.IsSharedSizeScope="True" 
+                Background="#FF000DFF" 
+                Foreground="#DDF8F7F7" 
+                FontSize="20">
+                Đăng kí học viên
+            </Button>
+            <Button 
+                x:Name="btnThongKe"
+                VerticalAlignment="Top"
+                Style="{DynamicResource MaterialDesignRaisedButton}"
+                materialDesign:ShadowAssist.ShadowDepth="Depth4" 
+                Width="674" Height="49" 
+                Background="#FF000DFF" 
+                BorderBrush="#FF002CFF" 
+                Grid.IsSharedSizeScope="True" 
+                Foreground="#DDFCF8F8" 
+                Content="Thông kê đăng kí" 
+                FontSize="20" 
+                Click="btnThongKe_Click"/>
+
+        </StackPanel>
+        <Frame 
+            Name="Thongtin" 
+            Margin="10,57,10.333,9.667"/>
+    </Grid>
+</Window>
